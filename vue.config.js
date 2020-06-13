@@ -6,7 +6,7 @@ const cdn = {
     'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
     'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.js',
   ],
-  css: [],
+  css: ['https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.css'],
 }
 
 module.exports = {
