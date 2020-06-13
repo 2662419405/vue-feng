@@ -12,6 +12,10 @@ const cdn = {
 module.exports = {
   chainWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
+      config.externals({
+        vue: 'Vue',
+        'ant-design-vue': 'antd',
+      })
       config.plugin('analyzer').use(BundleAnalyzerPlugin, [
         {
           analyzerPort: 9500,
