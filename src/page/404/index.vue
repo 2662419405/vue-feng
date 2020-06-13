@@ -1,9 +1,9 @@
 <template>
-    <div>公共页面</div>
+  <div>资源页面没找到</div>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>

@@ -1,26 +1,36 @@
-import VueRouter from 'vue-router';
-import Vue from 'vue';
-const App = () => import('../page/HelloWorld.vue');
-const Demo = () => import('../page/demo.vue');
+import VueRouter from 'vue-router'
+import Vue from 'vue'
 
-Vue.use(VueRouter);
+const Layout = () => import('@/layout/defaultLayout')
 
+const Demo = () => import('@/page/demo.vue')
+const NotFound = () => import('@/page/404')
+
+Vue.use(VueRouter)
 const routes = [
-    {
-        path: '/dd',
-        name: 'home',
+  {
+    path: '/',
+    component: Layout,
+    children: [
+      {
+        path: '/home',
         component: Demo,
-    },
-    {
-        path: '/de',
-        name: 'path',
-        component: App,
-    },
-];
+      },
+      {
+        path: '*',
+        componnet: NotFound,
+      },
+    ],
+  },
+  {
+    path: '*',
+    componnet: NotFound,
+  },
+]
 
 const router = new VueRouter({
-    mode: 'history',
-    routes,
-});
+  mode: 'history',
+  routes,
+})
 
-export default router;
+export default router
