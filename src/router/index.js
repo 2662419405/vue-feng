@@ -8,6 +8,10 @@ const Layout = () => import('@/layout/defaultLayout')
 const Tags = () => import('@/page/tags')
 const NotFound = () => import('@/page/404')
 const Home = () => import('@/page/home')
+const Login = () => import('@/page/login')
+const Code = () => import('@/page/code')
+const Album = () => import('@/page/album')
+const Tool = () => import('@/page/tool')
 
 Vue.use(VueRouter)
 const routes = [
@@ -30,8 +34,39 @@ const routes = [
         },
       },
       {
+        path: '/login',
+        component: Login,
+        meta: {
+          title: '登录',
+        },
+      },
+      {
+        path: '/code',
+        component: Code,
+        meta: {
+          title: '热门框架',
+        },
+      },
+      {
+        path: '/album',
+        component: Album,
+        meta: {
+          title: '相册',
+        },
+      },
+      {
+        path: '/tool',
+        component: Tool,
+        meta: {
+          title: '工具',
+        },
+      },
+      {
         path: '/404',
         component: NotFound,
+        meta: {
+          title: ' 登录失败',
+        },
       },
     ],
   },

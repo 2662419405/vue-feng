@@ -1,15 +1,31 @@
 <template>
   <nav class="links">
-    <router-link to="/">首页</router-link>
-    <router-link to="/tags">标签</router-link>
-    <router-link to="/tool">工具</router-link>
-    <router-link to="/code">热门框架</router-link>
-    <router-link to="/album">相册</router-link>
+    <template v-for="(item, index) in menu">
+      <router-link :key="index" :to="item.to" :class="defaultPath === item.to && 'active'">
+        {{ item.title }}
+      </router-link>
+    </template>
   </nav>
 </template>
 
 <script>
-export default {}
+import Menu from '@/components/common/menu'
+export default {
+  data() {
+    return {
+      defaultPath: '/',
+      menu: Menu,
+    }
+  },
+  created() {
+    this.$data.defaultPath = this.$route.path //初始化
+  },
+  watch: {
+    $route: function() {
+      this.$data.defaultPath = this.$route.path
+    },
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -30,6 +46,11 @@ export default {}
     font-weight: 400;
     height: 60px;
     margin-left: 30px;
+    &.active {
+      color: #18191a;
+      font-weight: 600;
+      border-bottom: 2px solid #1985ff;
+    }
     &:first-child {
       margin-left: 0;
     }
