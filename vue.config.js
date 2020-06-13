@@ -6,12 +6,17 @@ const cdn = {
     'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
     'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.js',
   ],
+  css: [],
 }
 
 module.exports = {
   chainWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
-      config.plugin('analyzer').use(BundleAnalyzerPlugin)
+      config.plugin('analyzer').use(BundleAnalyzerPlugin, [
+        {
+          analyzerPort: 9500,
+        },
+      ])
       config.plugin('compress').use(CompressionWebpackPlugin, [
         {
           test: /\.js$|\.html$|\.css$/,
