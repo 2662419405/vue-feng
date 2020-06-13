@@ -7,7 +7,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { LOGIN } from '../store/mutation-types'
+import { LOGIN } from '@/store/mutation-types'
 export default {
   computed: {
     ...mapState(['count']),

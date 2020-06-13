@@ -1,5 +1,8 @@
 <template>
-  <div>123</div>
+  <div>
+    首页
+    <router-link to="/tags">去tags</router-link>
+  </div>
 </template>
 
 <script>
