@@ -67,7 +67,7 @@ const routes = [
     path: '/404',
     component: NotFound,
     meta: {
-      title: ' 登录失败',
+      title: ' 访问页面不存在',
     },
   },
   {

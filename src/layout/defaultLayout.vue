@@ -6,15 +6,20 @@
         <router-view />
       </keep-alive>
     </transition>
-    <a-back-top />
+    <Setting />
+    <returnTop />
   </div>
 </template>
 
 <script>
+import returnTop from '@/components/return-top'
+import Setting from '@/components/setting'
 import Header from '@/components/common/header'
 export default {
   components: {
     Header,
+    returnTop,
+    Setting,
   },
 }
 </script>

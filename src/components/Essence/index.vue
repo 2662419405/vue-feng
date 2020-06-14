@@ -41,19 +41,6 @@ export default {
   position: relative;
   top: 8px;
 }
-.title {
-  flex: 1;
-  margin-left: 12px;
-  max-height: 44px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #494b4d;
-  line-height: 22px;
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: black;
-}
 .essence {
   .item {
     margin-top: 5px;
@@ -64,7 +51,7 @@ export default {
   }
   .essence-title {
     flex: 1;
-    margin-left: 12px;
+    margin-left: 18px;
     max-height: 44px;
     font-size: 14px;
     font-weight: 400;

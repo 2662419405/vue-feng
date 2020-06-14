@@ -8,6 +8,7 @@
         <Essence />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -15,12 +16,14 @@
 import Carousel from '@/components/carousel'
 import Hot from '@/components/Hot'
 import Essence from '@/components/Essence'
+import Footer from '@/components/footer'
 import { HOME_HOT, HOME_ESSENCE } from '@/store/mutation-types'
 export default {
   components: {
     Carousel,
     Hot,
     Essence,
+    Footer,
   },
   created() {
     this.init()
@@ -35,6 +38,9 @@ export default {
 </script>
 
 <style lang="scss">
+.layout {
+  overflow: hidden;
+}
 .layout_right {
   margin-top: 12px;
   float: right;
