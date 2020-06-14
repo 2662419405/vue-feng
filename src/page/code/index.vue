@@ -1,5 +1,5 @@
 <template>
-  <div>热门框架</div>
+  <div class="layout">热门框架</div>
 </template>
 
 <script>

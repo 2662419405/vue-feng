@@ -6,6 +6,7 @@
         <router-view />
       </keep-alive>
     </transition>
+    <a-back-top />
   </div>
 </template>
 
@@ -14,6 +15,14 @@ import Header from '@/components/common/header'
 export default {
   components: {
     Header,
+  },
+  created() {
+    document.title = this.$route.meta.title
+  },
+  watch: {
+    $route: function() {
+      document.title = this.$route.meta.title
+    },
   },
 }
 </script>

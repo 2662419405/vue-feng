@@ -25,6 +25,10 @@
           <a-button @click="postAircle" type="primary" class="btn-primary">发帖</a-button>
           <!-- 右侧内容栏 -->
           <div class="right-nav">
+            <div class="more">
+              <a-icon type="message" />
+              <a target="_blank" href="https://github.com/2662419405">关于作者</a>
+            </div>
             <div class="auth">
               <router-link to="/login">登录</router-link>
               <span></span>
@@ -66,6 +70,18 @@ export default {
     right: 13px;
     transform: translateY(-50%);
     cursor: pointer;
+  }
+  .more {
+    margin-right: 20px;
+    padding: 20px;
+    > a {
+      display: inline-block;
+      margin-left: 5px;
+      color: #494b4d;
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
   .btn-primary {
     margin-left: 15px;
@@ -141,6 +157,9 @@ export default {
       font-size: 18px;
       color: #1985ff;
       cursor: pointer;
+      > a {
+        color: #1985ff;
+      }
     }
   }
   .header-main {

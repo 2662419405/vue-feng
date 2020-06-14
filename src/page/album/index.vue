@@ -1,5 +1,5 @@
 <template>
-  <div>相册</div>
+  <div class="layout">相册</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>工具</div>
+  <div class="layout">工具</div>
 </template>
 
 <script>

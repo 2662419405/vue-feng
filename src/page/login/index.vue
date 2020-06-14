@@ -1,5 +1,5 @@
 <template>
-  <div>登录中心</div>
+  <div class="layout">登录中心</div>
 </template>
 
 <script>

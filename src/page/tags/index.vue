@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     {{ count }}
     <button @click="LOGIN">增加数字</button>
   </div>

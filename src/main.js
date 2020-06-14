@@ -3,6 +3,7 @@ import App from '@/App.vue'
 import store from '@/store'
 import router from '@/router'
 import '@/plugins/antd-vue'
+import '@/assets/styles/index.scss'
 
 Vue.config.productionTip = false
 
