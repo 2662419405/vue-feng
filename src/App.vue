@@ -5,7 +5,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  created() {
+    document.title = this.$route.meta.title
+  },
+  watch: {
+    $route: function() {
+      document.title = this.$route.meta.title
+    },
+  },
+}
 </script>
 
 <style></style>

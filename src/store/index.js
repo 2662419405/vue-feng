@@ -10,6 +10,7 @@ export default new Vuex.Store({
   state: {
     count: 1,
     home_hot: [],
+    essence: [],
   },
   mutations,
   getters,

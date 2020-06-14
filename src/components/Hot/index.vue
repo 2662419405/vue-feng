@@ -3,7 +3,7 @@
     <div class="f-card-header">
       <div class="title">
         <a-icon type="rise" />
-        <span>社区热门</span>
+        <span>热门框架</span>
       </div>
     </div>
     <div class="f-card-body">
@@ -14,7 +14,7 @@
         <a-tooltip placement="topLeft">
           <template slot="title">{{ item.title }}</template>
           <div class="item-content">
-            <router-link :to="item.id">{{ item.title }}</router-link>
+            <router-link :to="'post/' + item.id">{{ item.title }}</router-link>
             <div class="info">
               <div class="topic-name">{{ item.phone }}</div>
               <div class="time">{{ item.time }}</div>
@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .item {
   display: flex;
   height: 47px;
@@ -73,7 +73,7 @@ export default {
   }
   .item-content {
     flex: 1;
-    min-width: 282px;
+    min-width: 250px;
     margin-left: 10px;
     padding-right: 20px;
     align-items: flex-end;

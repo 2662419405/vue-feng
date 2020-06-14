@@ -61,14 +61,14 @@ const routes = [
           title: '工具',
         },
       },
-      {
-        path: '/404',
-        component: NotFound,
-        meta: {
-          title: ' 登录失败',
-        },
-      },
     ],
+  },
+  {
+    path: '/404',
+    component: NotFound,
+    meta: {
+      title: ' 登录失败',
+    },
   },
   {
     path: '*',

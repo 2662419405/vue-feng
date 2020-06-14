@@ -12,3 +12,6 @@ export const addCountAsync = () => {
 export const getHomeHot = () => {
   return Axios.get(`${BASEURL}/5ee5dd146ead5918044f5059/vue/hot`)
 }
+export const getEssenceData = () => {
+  return Axios.get(`${BASEURL}/5ee5dd146ead5918044f5059/vue/essence`)
+}

@@ -16,14 +16,6 @@ export default {
   components: {
     Header,
   },
-  created() {
-    document.title = this.$route.meta.title
-  },
-  watch: {
-    $route: function() {
-      document.title = this.$route.meta.title
-    },
-  },
 }
 </script>
 

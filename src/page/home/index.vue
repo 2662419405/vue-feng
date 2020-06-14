@@ -5,6 +5,7 @@
       <div class="layout_left"></div>
       <div class="layout_right">
         <Hot />
+        <Essence />
       </div>
     </div>
   </div>
@@ -13,11 +14,13 @@
 <script>
 import Carousel from '@/components/carousel'
 import Hot from '@/components/Hot'
-import { HOME_HOT } from '@/store/mutation-types'
+import Essence from '@/components/Essence'
+import { HOME_HOT, HOME_ESSENCE } from '@/store/mutation-types'
 export default {
   components: {
     Carousel,
     Hot,
+    Essence,
   },
   created() {
     this.init()
@@ -25,6 +28,7 @@ export default {
   methods: {
     init() {
       this.$store.dispatch(`${HOME_HOT}`)
+      this.$store.dispatch(`${HOME_ESSENCE}`)
     },
   },
 }
