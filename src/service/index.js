@@ -15,3 +15,6 @@ export const getHomeHot = () => {
 export const getEssenceData = () => {
   return Axios.get(`${BASEURL}/5ee5dd146ead5918044f5059/vue/essence`)
 }
+export const getArticleData = () => {
+  return Axios.get(`${BASEURL}/5ee5dd146ead5918044f5059/vue/article`)
+}

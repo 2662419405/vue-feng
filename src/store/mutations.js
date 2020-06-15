@@ -1,4 +1,4 @@
-import { LOGIN, HOME_HOT, HOME_ESSENCE } from '@/store/mutation-types'
+import { LOGIN, HOME_HOT, HOME_ESSENCE, HOME_ARTICLE } from '@/store/mutation-types'
 import { addCountAsync } from '@/service'
 
 export default {
@@ -11,5 +11,8 @@ export default {
   },
   [HOME_ESSENCE](state, { data }) {
     state.essence = data.data.list
+  },
+  [HOME_ARTICLE](state, { data }) {
+    state.article = data.data.list
   },
 }

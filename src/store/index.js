@@ -11,6 +11,7 @@ export default new Vuex.Store({
     count: 1,
     home_hot: [],
     essence: [],
+    article: [],
   },
   mutations,
   getters,
