@@ -7,16 +7,31 @@
       <div class="entry-info">
         <div class="title-wrap">
           <div class="title-wrap-title">
-            <router-link :to="'/post/' + item.id" class="title-wrap-a">
-              {{ item.title }}
-            </router-link>
+            <a-tooltip>
+              <template slot="title">{{ item.title }}</template>
+              <router-link :to="'/post/' + item.id" class="title-wrap-a">
+                {{ item.title }}
+              </router-link>
+            </a-tooltip>
+          </div>
+          <div class="tag-icon hot" v-if="item.hot">
+            <a-tooltip>
+              <template slot="title">热门</template>
+              <a-icon type="fire" theme="filled" />
+            </a-tooltip>
+          </div>
+          <div class="tag-icon essence" v-if="item.essence">
+            <a-tooltip>
+              <template slot="title">精华</template>
+              精
+            </a-tooltip>
           </div>
         </div>
         <div class="meta-box">
           <span>
             <span class="name">{{ item.createName }}</span>
             |
-            <span class="time">{{ item.createTime }}</span>
+            <span class="time" v-time-to-now="item.createTime"></span>
           </span>
           <span class="count-group">
             <ul class="action-list">
@@ -26,7 +41,7 @@
               </li>
               <li>
                 <a-icon type="message" />
-                <span class="count">{{ item.liu.length }}</span>
+                <span class="count" v-more="item.liu.length"></span>
               </li>
             </ul>
           </span>
@@ -45,6 +60,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tag-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 8px;
+  > i {
+    transform: scale(0.8) translateX(2px);
+  }
+  &.hot {
+    background: rgb(255, 51, 85);
+    color: #ffffff;
+  }
+  &.essence {
+    background: rgb(255, 145, 0);
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+  }
+}
 .meta-box {
   width: 683px;
   font-size: 12px;
